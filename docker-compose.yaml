@@ -1,0 +1,43 @@
+version: '2'
+services:
+
+  mysql:
+    image: mysql
+    env_file: secrets.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./local-dev/mysql/data:/usr/share/data/
+
+  # rails:
+  #   restart: always
+  #   build: ./rails
+  #   command: sh startup.sh
+  #   expose:
+  #     - "80"
+  #   privileged: true
+
+  app:
+    restart: always
+    build: ./app
+    command: rackup -p 80
+    expose:
+      - "80"
+    env_file: secrets.env
+    privileged: true
+
+  nginx:
+    restart: always
+    build: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - app:app
+      # - frontend:frontend
+      # - websockets:websockets
+    # volumes_from:
+    #   - data
+    command: /nginx/conf/startup.sh
+
+  

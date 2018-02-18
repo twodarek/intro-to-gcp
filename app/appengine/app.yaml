@@ -1,0 +1,4 @@
+runtime: custom
+env: flex
+entrypoint: rackup web.rb -p 8080
+

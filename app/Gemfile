@@ -1,0 +1,11 @@
+source 'https://rubygems.org' do
+  gem 'thin'
+  gem 'dotenv'
+  gem 'rerun', :groups => [:development]
+  gem 'sinatra'
+  gem 'json'
+  gem 'rufus-scheduler'
+  gem 'rake'
+  gem 'mysql2'
+  gem 'google-cloud-storage'
+end

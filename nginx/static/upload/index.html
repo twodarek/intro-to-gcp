@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Upload a video</title>
+
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data" action="/api/video/upload">
+	<p>
+		<label>Video Title
+			<input type="text" name="title">
+		</label>
+	</p>
+
+	<p>
+		<label>Video Description
+			<input type="text" name="description">
+		</label>
+	</p>
+
+	<p>
+		<label>Video File
+			<input type="file" name="video_file">
+		</label>
+	</p>
+
+	<input type="submit" name="submit-button" value="Upload">
+
+</body>
+</html>
