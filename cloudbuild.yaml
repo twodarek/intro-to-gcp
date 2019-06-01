@@ -8,6 +8,15 @@ steps:
   - --location=global
   - --keyring=testtube
   - --key=testtube
+- name: gcr.io/cloud-builders/gcloud
+  args:
+  - kms
+  - decrypt
+  - --ciphertext-file=helm/app/values.yaml.enc
+  - --plaintext-file=helm/app/values.yaml
+  - --location=global
+  - --keyring=testtube
+  - --key=testtube
   
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/app', '.']
@@ -15,6 +24,9 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/nginx', '.']
   dir: 'nginx'
+
+- name: 'gcr.io/cloudkite-public/helm'
+
 
 images: ['gcr.io/$PROJECT_ID/app', 'gcr.io/$PROJECT_ID/nginx']
 timeout: 600s

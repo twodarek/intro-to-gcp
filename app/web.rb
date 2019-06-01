@@ -18,11 +18,12 @@ settings = Sinatra::Application.settings
 
 # set :public_folder, Proc.new { File.join(root, "client") }
 set :protection, :except => :frame_options
+enable :logging, :dump_errors, :raise_errors
 
 local_video_base = "videos"
 
 get '/' do
-  redirect '/index.html'
+  return "ok"
 end
 
 get '/upload/' do
