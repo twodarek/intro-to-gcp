@@ -1,9 +1,10 @@
-FROM ruby:2.3.3
+FROM ruby:2.3.4
 
 MAINTAINER Thomas Wodarek <twodarek@thomaswodarek.com>
 
 ENV RACK_ENV production
 ENV MAIN_APP_FILE web.rb
+RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install build-essential libmysqlclient-dev -y
 
@@ -14,7 +15,8 @@ ENV GEM_PATH /rb
 ENV GEM_HOME /rb
 
 RUN gem update
-RUN gem install bundler
+# RUN gem install bundler
+RUN gem install bundler -v '< 2'
 
 RUN echo "Starting you sinatra build."
 RUN mkdir -p /wodarek/secret/

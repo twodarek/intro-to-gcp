@@ -18,11 +18,12 @@ settings = Sinatra::Application.settings
 
 # set :public_folder, Proc.new { File.join(root, "client") }
 set :protection, :except => :frame_options
+enable :logging, :dump_errors, :raise_errors
 
 local_video_base = "videos"
 
 get '/' do
-  redirect '/index.html'
+  return "ok"
 end
 
 get '/upload/' do
@@ -38,7 +39,11 @@ get '/api' do
 end
 
 get '/api/video/all' do
-  result = get_all_video_objs()
+  begin
+    result = get_all_video_objs()
+  rescue Error => bang
+    puts bang
+  end
   if result.nil?
     return 404
   else
@@ -106,10 +111,16 @@ end
 def get_all_video_objs()
   puts "getting all videos"
   sql_client = get_sql_client
+  puts "1"
   stmt = sql_client.prepare("SELECT * FROM video")
+  puts "2"
   results = stmt.execute()
+  puts "3"
   resultant = []
+  puts "4"
   results.each do |row|
+    puts "5"
+    puts row
     obj = {}
     obj['title'] = row['title']
     obj['description'] = row['description']
@@ -131,9 +142,15 @@ def get_gcs_client()
 end
 
 def get_sql_client()
+  puts "1-1"
   host = ENV["SQL_HOST"]
+  puts "1-2"
   user = ENV["SQL_USER"]
+  puts "1-3"
   pass = ENV["SQL_PASS"]
+  puts "1-4"
   db = ENV["SQL_DB"]
+  puts "1-5"
   client = Mysql2::Client.new(:host => host, :username => user, :password => pass, :database => db)
+  puts "1-6"
 end
