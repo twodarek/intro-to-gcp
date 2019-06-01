@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-	
+<head>	
 	<title>TestTube</title>
 	<script type="text/javascript" src="/list.js"></script>
-
+	<link rel="stylesheet" href="list.css">
 </head>
-<body>
-	
-	<h1>TestTube</h1>
-	<h2>A product of Wodarek Productions</h2>
 
-	<div id="video_list"></div>
+<body onload="loadPage()">
+	<div id="header">
+		<h1>TestTube</h1>
+	</div>
 
-	<body onload="loadPage()">
+	<div id="main">
+		<div id="nav">
+			<a href="https://media.giphy.com/media/N8Lfh9gWcWYIU/giphy.gif">Video List</a>
+			<br>
+			<a href="https://i.pinimg.com/originals/1f/c6/2d/1fc62deaff7cdec898fe9287f45c1a9a.gif">Watch</a>
+			<br>
+			<a href="https://thumbs.gfycat.com/IndelibleHelplessConch-size_restricted.gif">Upload</a>
+		</div>
+
+		<div id="video_list">
+			[video list goes here]
+		</div>
+	</div>
+
+	<div id="footer">
+		Brought to you by Wodarek Productions
+	</div>
 
 </body>
 </html>
