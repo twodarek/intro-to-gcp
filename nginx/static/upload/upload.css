@@ -1,0 +1,63 @@
+body{
+	font-family: Arial;
+}
+
+h2{
+	line-height: 0.5;
+}
+
+form{
+	line-height: 1.5;
+	padding: 0px 10px 20px;
+}
+
+#header{
+	display: block;
+	border: 1px solid #4286f5;
+	background: #4286f5;
+	padding: 0px 20px;
+	color: white;
+	font-family: "Arial Black";
+	text-shadow: 1px 1px black;
+}
+
+#main{
+	display: flex;
+	clear: left right;
+}
+
+#nav{
+	background: #e7f0fe;
+	border: 1px solid #4286f5;
+	border-right: 5px solid #4286f5;
+	width: 100px;
+	padding: 5px 10px;
+	margin-right: 4px;
+	text-align: right;
+	line-height: 1.4;
+	font-size: 14pt;
+}
+
+input[type=submit] {
+	font-size: 13pt;
+	border: 4px outset #4286f5;
+	border-radius: 5px;
+	background: #e7f0fe;
+	box-shadow: 2px 2px 6px #cccccc;
+}
+input[type=submit]:hover{
+	background: #cfe0fc;
+	cursor: pointer;
+}
+input[type=submit]:active{
+	background: #cfe0fc;
+	border: 4px inset #4286f5;
+	cursor: pointer;
+}
+
+#footer{
+	position: fixed;
+	bottom: 5px;
+	padding: 5px;
+	font-style: italic;
+}

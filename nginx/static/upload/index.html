@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title>Upload a video</title>
-
+	<title>Upload Video</title>
+	<link rel="stylesheet" href="upload.css">
 </head>
+
 <body>
+	<div id="header">
+		<h1>TestTube</h1>
+	</div>
 
-<form method="post" enctype="multipart/form-data" action="/api/video/upload">
-	<p>
-		<label>Video Title
-			<input type="text" name="title">
-		</label>
-	</p>
+	<div id="main">
+		<div id="nav">
+			<a href="/">Video List</a>
+			<br>
+			<a href="/upload">Upload</a>
+		</div>
 
-	<p>
-		<label>Video Description
-			<input type="text" name="description">
-		</label>
-	</p>
+		<form method="post" enctype="multipart/form-data" action="/api/video/upload">
+			<h2>Upload a Video</h2>
+			
+			<label>Video Title:
+				<input type="text" name="title">
+			</label>
+			<br>
+			<label>Video Description:
+				<input type="text" name="description">
+			</label>
+			<br>
+			<label>Video File:
+				<input type="file" name="video_file">
+			</label>
+			<br>
+			<br>
+			<input type="submit" name="submit-button" value="Upload">
+		</form>
+	</div>
 
-	<p>
-		<label>Video File
-			<input type="file" name="video_file">
-		</label>
-	</p>
-
-	<input type="submit" name="submit-button" value="Upload">
+	<div id="footer">
+		Brought to you by Wodarek Productions
+	</div>
 
 </body>
 </html>
