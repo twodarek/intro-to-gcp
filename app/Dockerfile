@@ -1,4 +1,4 @@
-FROM ruby:2.3.3
+FROM ruby:2.3.4
 
 MAINTAINER Thomas Wodarek <twodarek@thomaswodarek.com>
 
