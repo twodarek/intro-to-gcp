@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<title>Watch</title>
 	<script type="text/javascript" src="/watch/watch.js"></script>
-
+	<link rel="stylesheet" href="watch.css">
 </head>
-<body>
 
-	<div id="content" style="align:center; display:block">
-		<div id="title"></div><br>
-		<div id="description"></div><br>
-		<div id="video_player"></div>
+<body onload="loadPage()">
+	<div id="header">
+		<h1>TestTube</h1>
 	</div>
 
-	<body onload="loadPage()">
+	<div id="main">
+		<div id="nav">
+			<a href="/">Video List</a>
+			<br>
+			<a href="/upload">Upload</a>
+		</div>
+
+		<div id="content" style="align:center; display:block">
+			<div id="title"></div>
+
+			<div id="description"></div>
+			<br>
+			<div id="video_player"></div>
+		</div>
+	</div>
+
+	<div id="footer">
+		Brought to you by Wodarek Productions
+	</div>
 
 </body>
 </html>
