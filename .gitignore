@@ -25,4 +25,5 @@
 /secrets.env
 **/secret
 **/.env
+**/.DS_Store
 
