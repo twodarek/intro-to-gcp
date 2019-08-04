@@ -26,4 +26,5 @@
 **/secret
 **/.env
 **/.DS_Store
+/helm/app/values.yaml
 
