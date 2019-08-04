@@ -32,14 +32,14 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/nginx']
 - name: 'gcr.io/twodarek-talks/helm'
-  args: ['upgrade', '--install', 'app', '.', '--values', 'values.yaml', '--namespace', 'app', '--set', 'image.tag', '$COMMIT_SHA']
+  args: ['upgrade', '--install', 'app', '.', '--values', 'values.yaml', '--namespace', 'app', '--set', 'image.tag=$COMMIT_SHA']
   dir: 'helm/app'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
   - 'TILLER_NAMESPACE=helm'
 - name: 'gcr.io/$PROJECT_ID/helm'
-  args: ['upgrade', '--install', 'nginx', '.', '--values', 'values.yaml', '--namespace', 'app', '--set', 'image.tag', '$COMMIT_SHA']
+  args: ['upgrade', '--install', 'nginx', '.', '--values', 'values.yaml', '--namespace', 'app', '--set', 'image.tag=$COMMIT_SHA']
   dir: 'helm/nginx'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
