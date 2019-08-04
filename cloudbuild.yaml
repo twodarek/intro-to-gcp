@@ -21,7 +21,6 @@ steps:
   args: ['pull', 'gcr.io/$PROJECT_ID/app']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['pull', 'gcr.io/$PROJECT_ID/nginx']
-- name: 'gcr.io/twodarek-talks/helm'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/app:latest', '-t', 'gcr.io/$PROJECT_ID/app:$COMMIT_SHA', '--cache-from', 'gcr.io/$PROJECT_ID/app:latest', '.']
   dir: 'app'
