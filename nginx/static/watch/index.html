@@ -3,26 +3,24 @@
 <head>
 	<title>Watch</title>
 	<script type="text/javascript" src="/watch/watch.js"></script>
-	<link rel="stylesheet" href="watch.css">
+	<link rel="stylesheet" href="../style.css">
 </head>
 
 <body onload="loadPage()">
 	<div id="header">
-		<h1>TestTube</h1>
+		<img id="logo" src="../testTubeLogo-small.png"/>
 	</div>
 
-	<div id="main">
-		<div id="nav">
-			<a href="/">Video List</a>
-			<br>
-			<a href="/upload">Upload</a>
-		</div>
+	<div id="nav">
+		<div class="nav-item" onclick="location.href='/';">Video List</div>
+		<div class="nav-item" onclick="location.href='/upload';">Upload</div>
+	</div>
 
-		<div id="content" style="align:center; display:block">
+	<div id="main"> 
+		<div id="content">
 			<div id="title"></div>
-
 			<div id="description"></div>
-			<br>
+			<br/>
 			<div id="video_player"></div>
 		</div>
 	</div>

@@ -2,38 +2,36 @@
 <html>
 <head>
 	<title>Upload Video</title>
-	<link rel="stylesheet" href="upload.css">
+	<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 	<div id="header">
-		<h1>TestTube</h1>
+		<img id="logo" src="../testTubeLogo-small.png"/>
+	</div>
+
+	<div id="nav">
+		<div class="nav-item" onclick="location.href='/';">Video List</div>
+		<div class="nav-item" onclick="location.href='/upload';">Upload</div>
 	</div>
 
 	<div id="main">
-		<div id="nav">
-			<a href="/">Video List</a>
-			<br>
-			<a href="/upload">Upload</a>
-		</div>
-
-		<form method="post" enctype="multipart/form-data" action="/api/video/upload">
+		<form id="upload-form" method="post" enctype="multipart/form-data" action="/api/video/upload">
 			<h2>Upload a Video</h2>
 			
 			<label>Video Title:
 				<input type="text" name="title">
 			</label>
-			<br>
+			<br/>
 			<label>Video Description:
-				<input type="text" name="description">
+				<input type="text" name="description" size=50>
 			</label>
-			<br>
+			<br/>
 			<label>Video File:
 				<input type="file" name="video_file">
 			</label>
-			<br>
-			<br>
-			<input type="submit" name="submit-button" value="Upload">
+			<br/>
+			<input type="submit" id="upload-button" name="submit-button" value="Upload">
 		</form>
 	</div>
 
