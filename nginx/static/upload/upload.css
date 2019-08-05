@@ -13,12 +13,13 @@ form{
 
 #header{
 	display: block;
-	border: 1px solid #4286f5;
-	background: #4286f5;
-	padding: 0px 20px;
-	color: white;
-	font-family: "Arial Black";
-	text-shadow: 1px 1px black;
+	border-bottom: 5px solid #4286f5;
+	background: #ffffff;
+	padding: 0px 20px 5px;
+}
+
+#logo{
+	height: 75px;
 }
 
 #main{
@@ -27,29 +28,46 @@ form{
 }
 
 #nav{
-	background: #e7f0fe;
-	border: 1px solid #4286f5;
-	border-right: 5px solid #4286f5;
-	width: 100px;
-	padding: 5px 10px;
+	display: flex;
+	flex-direction: column;
+	float: left;
+	clear: left right;
+	background: #4286f5;
+	border: 5px solid #4286f5;
+	border-top: none;
 	margin-right: 4px;
-	text-align: right;
-	line-height: 1.4;
+	line-height: 1.8;
+}
+.nav-item {
+	color: #073c92;
+	background: #e7f0fe;
+	text-align: center;
 	font-size: 14pt;
+	font-weight: bold;
+	padding: 10px 15px;
+	margin-bottom: 5px;
+}
+.nav-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0px;
+}
+.nav-item:hover {
+	cursor: pointer;
+	box-shadow: -2px -2px 2px inset, 1px 1px 1px inset;
 }
 
-input[type=submit] {
+#upload-button {
 	font-size: 13pt;
 	border: 4px outset #4286f5;
 	border-radius: 5px;
 	background: #e7f0fe;
 	box-shadow: 2px 2px 6px #cccccc;
 }
-input[type=submit]:hover{
+#upload-button:hover{
 	background: #cfe0fc;
 	cursor: pointer;
 }
-input[type=submit]:active{
+#upload-button:active{
 	background: #cfe0fc;
 	border: 4px inset #4286f5;
 	cursor: pointer;
