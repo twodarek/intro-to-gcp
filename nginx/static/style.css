@@ -52,6 +52,27 @@ body {
 	clear: right;
 	padding: 10px;
 }
+#video_list div {
+	display: flex;
+}
+#video_list a::before {
+	content: url("playButtonIcon.png");
+	padding-right: 5px;
+}
+#video_list a {
+	color: #073c92;
+    background: #eeeeee;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 0px 15px;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+}
+#video_list a:hover {
+	background: #dddddd;
+}
 
 h2 {
 	font-family: Arial Black;
@@ -90,15 +111,23 @@ h2 {
 	cursor: pointer;
 }
 
-#content{
+#content {
 	text-align: left;
 	padding-bottom: 20px;
 }
 
-#title{
+#title {
+	font-family: Arial Black;
 	font-weight: bold;
-	font-size: 14pt;
+	font-size: 16pt;
 	padding: 10px 0px;
+}
+#title, #description {
+	padding-left: 10px;
+}
+
+#video_player video {
+	width: 100%;
 }
 
 #footer {
