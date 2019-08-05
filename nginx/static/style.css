@@ -1,24 +1,24 @@
-body{
+body {
+	color: #06327a;
 	font-family: Arial;
 }
 
-#header{
+#header {
 	display: block;
 	border-bottom: 5px solid #4286f5;
 	background: #ffffff;
 	padding: 0px 20px 5px;
 }
-
-#logo{
+#logo {
 	height: 75px;
 }
 
-#main{
+#main {
 	display: flex;
 	clear: left right;
 }
 
-#nav{
+#nav {
 	display: flex;
 	flex-direction: column;
 	float: left;
@@ -33,7 +33,7 @@ body{
 	color: #073c92;
 	background: #e7f0fe;
 	text-align: center;
-	font-size: 14pt;
+	font-size: 15pt;
 	font-weight: bold;
 	padding: 10px 15px;
 	margin-bottom: 5px;
@@ -47,39 +47,61 @@ body{
 	box-shadow: -2px -2px 2px inset, 1px 1px 1px inset;
 }
 
-#video_list{
+#video_list {
 	flex: 1 /*fill the rest of the page width*/;
 	clear: right;
 	padding: 10px;
 }
 
-h2{
+h2 {
+	font-family: Arial Black;
 	line-height: 0.5;
 }
 
-#upload-form{
-	line-height: 1.5;
-	padding: 0px 10px 20px;
+#upload-form {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.4px;
+	line-height: 1.8;
+	padding: 0px 10px 10px;
+}
+#upload-form label {
+	padding-left: 15px;
 }
 
 #upload-button {
+	font-weight: bold;
 	font-size: 13pt;
+	letter-spacing: 0.5px;
 	border: 4px outset #4286f5;
 	border-radius: 5px;
+	padding: 5px 10px;
+	margin-top: 20px;
 	background: #e7f0fe;
 	box-shadow: 2px 2px 6px #cccccc;
 }
-#upload-button:hover{
+#upload-button:hover {
 	background: #cfe0fc;
 	cursor: pointer;
 }
-#upload-button:active{
+#upload-button:active {
 	background: #cfe0fc;
 	border: 4px inset #4286f5;
 	cursor: pointer;
 }
 
-#footer{
+#content{
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+#title{
+	font-weight: bold;
+	font-size: 14pt;
+	padding: 10px 0px;
+}
+
+#footer {
 	position: fixed;
 	bottom: 5px;
 	padding: 5px;
