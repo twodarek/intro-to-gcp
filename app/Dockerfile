@@ -18,7 +18,7 @@ RUN gem update
 # RUN gem install bundler
 RUN gem install bundler -v '< 2'
 
-RUN echo "Starting you sinatra build."
+RUN echo "Starting your sinatra build."
 RUN mkdir -p /wodarek/secret/
 RUN mkdir -p /wodarek/videos/
 WORKDIR /wodarek/
