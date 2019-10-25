@@ -26,17 +26,6 @@ body {
 	clear: left right;
 }
 
-#nav {
-	display: flex;
-	flex-direction: column;
-	float: left;
-	clear: left right;
-	background: $main-blue;
-	border: 5px solid $main-blue;
-	border-top: none;
-	margin-right: 4px;
-	line-height: 1.8;
-}
 #nav-menu {
 	height: 85px;
 	display: flex;

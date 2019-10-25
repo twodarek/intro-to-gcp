@@ -20,18 +20,6 @@ body {
 	clear: left right;
 }
 
-#nav {
-	display: flex;
-	flex-direction: column;
-	float: left;
-	clear: left right;
-	background: #4286f5;
-	border: 5px solid #4286f5;
-	border-top: none;
-	margin-right: 4px;
-	line-height: 1.8;
-}
-
 #nav-menu {
 	height: 85px;
 	display: flex;
