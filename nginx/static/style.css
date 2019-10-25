@@ -4,10 +4,13 @@ body {
 }
 
 #header {
+	/*display: flex;*/
 	display: block;
+	height: 80px;
 	border-bottom: 5px solid #4286f5;
 	background: #ffffff;
 	padding: 0px 20px 5px;
+	align-items: center;
 }
 #logo {
 	height: 75px;
@@ -29,6 +32,16 @@ body {
 	margin-right: 4px;
 	line-height: 1.8;
 }
+
+#nav-menu {
+	height: 85px;
+	display: flex;
+	float: right;
+	background: #4286f5;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
 .nav-item {
 	color: #073c92;
 	background: #e7f0fe;
@@ -36,21 +49,24 @@ body {
 	font-size: 15pt;
 	font-weight: bold;
 	padding: 10px 15px;
-	margin-bottom: 5px;
-}
-.nav-item:last-child {
-	border-bottom: none;
-	margin-bottom: 0px;
+	margin-right: 5px;
+	width: 100px;
+	height: 58px;
+	display: flex;
+	float: right;
 }
 .nav-item:hover {
 	cursor: pointer;
 	box-shadow: -2px -2px 2px inset, 1px 1px 1px inset;
 }
+.nav-link {
+	margin: auto;
+}
 
 #video_list {
 	flex: 1 /*fill the rest of the page width*/;
 	clear: right;
-	padding: 10px;
+	padding: 12px 24px;
 }
 #video_list div {
 	display: flex;
@@ -84,7 +100,7 @@ h2 {
 	font-weight: bold;
 	letter-spacing: 0.4px;
 	line-height: 1.8;
-	padding: 0px 10px 10px;
+	padding: 15px 45px;
 }
 #upload-form label {
 	padding-left: 15px;
@@ -113,6 +129,7 @@ h2 {
 
 #content {
 	text-align: left;
+	padding-left: 15px;
 	padding-bottom: 20px;
 }
 
@@ -124,6 +141,10 @@ h2 {
 }
 #title, #description {
 	padding-left: 10px;
+}
+
+#video_player {
+	background-color: peachpuff;
 }
 
 #video_player video {
