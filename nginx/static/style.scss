@@ -1,12 +1,18 @@
+$main-blue: #4286f5;
+$text-med-dark: #073c92;
+$text-navy: #06327a;
+$button-dark: #cfe0fc;
+$button-light: #e7f0fe;
+
 body {
-	color: #06327a;
+	color: $text-navy;
 	font-family: Arial;
 }
 
 #header {
 	display: block;
 	height: 80px;
-	border-bottom: 5px solid #4286f5;
+	border-bottom: 5px solid $main-blue;
 	background: #ffffff;
 	padding: 0px 20px 5px;
 	align-items: center;
@@ -25,22 +31,20 @@ body {
 	flex-direction: column;
 	float: left;
 	clear: left right;
-	background: #4286f5;
-	border: 5px solid #4286f5;
+	background: $main-blue;
+	border: 5px solid $main-blue;
 	border-top: none;
 	margin-right: 4px;
 	line-height: 1.8;
 }
-
 #nav-menu {
 	height: 85px;
 	display: flex;
 	float: right;
-	background: #4286f5;
+	background: $main-blue;
 	padding-left: 5px;
 	padding-top: 5px;
 }
-
 .nav-item {
 	display: flex;
 	float: right;
@@ -49,14 +53,15 @@ body {
 	font-size: 15pt;
 	font-weight: bold;
 	text-align: center;
-	color: #073c92;
-	background: #e7f0fe;
+	color: $text-med-dark;
+	background: $button-light;
 	padding: 10px 15px;
 	margin-right: 5px;
-}
-.nav-item:hover {
-	cursor: pointer;
-	box-shadow: -2px -2px 2px inset, 1px 1px 1px inset;
+
+	&:hover {
+		cursor: pointer;
+		box-shadow: -2px -2px 2px inset, 1px 1px 1px inset;
+	}
 }
 .nav-link {
 	margin: auto;
@@ -66,27 +71,31 @@ body {
 	flex: 1 /*fill the rest of the page width*/;
 	clear: right;
 	padding: 12px 24px;
-}
-#video_list div {
-	display: flex;
-}
-#video_list a::before {
-	content: url("playButtonIcon.png");
-	padding-right: 5px;
-}
-#video_list a {
-	color: #073c92;
-    background: #eeeeee;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14pt;
-    font-weight: bold;
-    padding: 0px 15px;
-    border: 1px solid gray;
-    margin-bottom: 5px;
-}
-#video_list a:hover {
-	background: #dddddd;
+	
+	div {
+		display: flex;
+	}
+
+	a {
+		color: $text-med-dark;
+		background: #eeeeee;
+		text-align: center;
+		text-decoration: none;
+		font-size: 14pt;
+		font-weight: bold;
+		padding: 0px 15px;
+		border: 1px solid gray;
+		margin-bottom: 5px;
+
+		&:hover {
+			background: #dddddd;
+		}
+
+		&::before {
+			content: url("playButtonIcon.png");
+			padding-right: 5px;
+		}
+	}
 }
 
 h2 {
@@ -100,30 +109,33 @@ h2 {
 	letter-spacing: 0.4px;
 	line-height: 1.8;
 	padding: 15px 45px;
-}
-#upload-form label {
-	padding-left: 15px;
+	
+	label {
+		padding-left: 15px;
+	}
 }
 
 #upload-button {
 	font-weight: bold;
 	font-size: 13pt;
 	letter-spacing: 0.5px;
-	border: 4px outset #4286f5;
+	border: 4px outset $main-blue;
 	border-radius: 5px;
 	padding: 5px 10px;
 	margin-top: 20px;
-	background: #e7f0fe;
+	background: $button-light;
 	box-shadow: 2px 2px 6px #cccccc;
-}
-#upload-button:hover {
-	background: #cfe0fc;
-	cursor: pointer;
-}
-#upload-button:active {
-	background: #cfe0fc;
-	border: 4px inset #4286f5;
-	cursor: pointer;
+	
+	&:hover {
+		background: $button-dark;
+		cursor: pointer;
+	}
+
+	&:active {
+		background: $button-dark;
+		border: 4px inset $main-blue;
+		cursor: pointer;
+	}
 }
 
 #content {
