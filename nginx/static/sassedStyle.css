@@ -61,22 +61,24 @@ body {
   display: flex;
 }
 #video_list a {
+  display: flex;
+  align-items: center;
+  width: 60%;
   color: #073c92;
   background: #eeeeee;
-  text-align: center;
   text-decoration: none;
   font-size: 14pt;
   font-weight: bold;
-  padding: 0px 15px;
+  padding: 5px 15px;
   border: 1px solid gray;
   margin-bottom: 5px;
 }
 #video_list a:hover {
   background: #dddddd;
 }
-#video_list a::before {
-  content: url("playButtonIcon.png");
-  padding-right: 5px;
+
+.video-link-title {
+  margin-left: 8px;
 }
 
 h2 {

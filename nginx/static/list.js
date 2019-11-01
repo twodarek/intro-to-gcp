@@ -1,6 +1,6 @@
 function loadPage() {
-    var callUrl = "/api/video/all"
-    httpGetAsync(callUrl, loadVideoList)
+    var callUrl = "/api/video/all";
+    httpGetAsync(callUrl, loadVideoList);
 }
 
 function loadVideoList(res) {
@@ -9,7 +9,7 @@ function loadVideoList(res) {
     var list_container = document.getElementById("video_list");
     results.forEach(function(res) {
         var line = document.createElement('div');
-        line.innerHTML = "<a href='/watch/?video=" + res.video_uuid + "'>" + res.title + "</a>";
+        line.innerHTML = "<a href='/watch/?video=" + res.video_uuid + "'>" + "<img class='video-play-icon' src='playButtonIcon.png'/><span class='video-link-title'>" + res.title + "</span></a>";
         list_container.appendChild(line);
     });
 }
